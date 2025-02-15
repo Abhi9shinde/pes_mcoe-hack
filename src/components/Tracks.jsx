@@ -1,32 +1,40 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const tracks = [
   {
     title: "Cyber Security",
-    description: "Develop solutions for modern security challenges and protect digital assets.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=400&h=400"
+    description:
+      "Develop solutions for modern security challenges and protect digital assets.",
+    image:
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=400&h=400",
   },
   {
     title: "AI / ML",
-    description: "Create intelligent systems and machine learning solutions for real-world problems.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=400&h=400"
+    description:
+      "Create intelligent systems and machine learning solutions for real-world problems.",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=400&h=400",
   },
   {
     title: "Blockchain",
-    description: "Build decentralized applications and explore blockchain technology.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=400&h=400"
+    description:
+      "Build decentralized applications and explore blockchain technology.",
+    image:
+      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=400&h=400",
   },
   {
     title: "Game Dev",
-    description: "Design and develop engaging games using cutting-edge technologies.",
-    image: "https://images.unsplash.com/photo-1556438064-2d7646166914?auto=format&fit=crop&q=80&w=400&h=400"
-  }
+    description:
+      "Design and develop engaging games using cutting-edge technologies.",
+    image:
+      "https://images.unsplash.com/photo-1556438064-2d7646166914?auto=format&fit=crop&q=80&w=400&h=400",
+  },
 ];
 
 export default function Tracks() {
   return (
-    <section id="tracks" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="tracks" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -34,7 +42,9 @@ export default function Tracks() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">Hackathon Tracks</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            🚀 Hackathon Tracks
+          </h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -45,16 +55,24 @@ export default function Tracks() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="glass-card overflow-hidden"
+              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform"
             >
-              <div className="relative h-48 mb-4">
+              {/* Image with overlay */}
+              <div className="relative h-48 rounded-lg overflow-hidden mb-4">
                 <img
                   src={track.image}
                   alt={track.title}
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{track.title}</h3>
+
+              {/* Track Title */}
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {track.title}
+              </h3>
+
+              {/* Description */}
               <p className="text-gray-300">{track.description}</p>
             </motion.div>
           ))}
