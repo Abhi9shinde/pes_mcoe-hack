@@ -56,7 +56,7 @@ export default function FAQ() {
                           }`}
                         />
                       </Disclosure.Button>
-                      <Disclosure.Panel className="px-4 pb-4 text-gray-300">
+                      <Disclosure.Panel className="px-4 pb-4 text-gray-500">
                         {faq.answer}
                       </Disclosure.Panel>
                     </div>
