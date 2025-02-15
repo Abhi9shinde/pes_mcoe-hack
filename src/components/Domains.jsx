@@ -46,7 +46,7 @@ export default function Domains() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold text-primary mb-4">Hackathon Domains</h2>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-500 text-lg">
             Explore different domains and create impactful solutions.
           </p>
         </motion.div>
@@ -62,8 +62,8 @@ export default function Domains() {
               className="glass-card p-6 rounded-2xl backdrop-blur-md bg-white/10 shadow-lg border border-white/10 text-center"
             >
               <div className="flex justify-center mb-4">{domain.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-2">{domain.title}</h3>
-              <p className="text-gray-200">{domain.description}</p>
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-2">{domain.title}</h3>
+              <p className="text-gray-500">{domain.description}</p>
             </motion.div>
           ))}
         </div>

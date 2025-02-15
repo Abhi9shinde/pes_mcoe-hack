@@ -13,7 +13,7 @@ export default function ProblemStatements() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">Problem Statements</h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-500 text-lg max-w-3xl mx-auto">
             Choose from a variety of challenging problem statements across different domains.
           </p>
         </motion.div>

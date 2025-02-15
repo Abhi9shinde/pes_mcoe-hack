@@ -49,7 +49,7 @@ export default function Prizes() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold text-primary mb-4">🏆 Prizes & Rewards</h2>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-500 text-lg">
             Compete and win exciting rewards, mentorship, and career opportunities!
           </p>
         </motion.div>
@@ -65,12 +65,12 @@ export default function Prizes() {
               className="glass-card p-6 rounded-2xl backdrop-blur-md bg-white/10 shadow-lg border border-white/10 text-center"
             >
               <div className="flex justify-center mb-4">{prize.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-2">{prize.title}</h3>
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-2">{prize.title}</h3>
               <p className="text-2xl font-bold text-yellow-400 mb-4">{prize.amount}</p>
               
               <ul className="text-left space-y-2">
                 {prize.benefits.map((benefit, i) => (
-                  <li key={i} className="flex items-center text-gray-200">
+                  <li key={i} className="flex items-center text-gray-500">
                     <FaCheckCircle className="text-green-400 mr-2" />
                     {benefit}
                   </li>
