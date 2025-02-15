@@ -46,7 +46,7 @@ export default function Timeline() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-primary mb-4">Event Timeline</h2>
-          <p className="text-gray-400">Follow the roadmap to an incredible hackathon experience!</p>
+          <p className="text-gray-500">Follow the roadmap to an incredible hackathon experience!</p>
         </motion.div>
 
         {/* Timeline Container */}
@@ -69,14 +69,14 @@ export default function Timeline() {
                 {/* Timeline Content */}
                 <div className="w-full md:w-[45%]">
                   <div className="glass-card p-6 rounded-xl shadow-lg">
-                    <h3 className="text-lg font-semibold text-white">{event.title}</h3>
+                    <h3 className="text-lg font-semibold text-black dark:text-white">{event.title}</h3>
                     <p className="text-primary font-medium">{event.date}</p>
-                    <p className="text-gray-300 mt-2">{event.description}</p>
+                    <p className="text-gray-500 mt-2">{event.description}</p>
                   </div>
                 </div>
 
                 {/* Timeline Connector */}
-                <div className="hidden md:flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full shadow-lg border-4 border-gray-900">
+                <div className="hidden md:flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full shadow-lg border-4 border-gray-300/60">
                   <span className="font-bold text-lg">{index + 1}</span>
                 </div>
 

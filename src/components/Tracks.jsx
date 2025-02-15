@@ -33,7 +33,7 @@ const tracks = [
 
 export default function Tracks() {
   return (
-    <section id="tracks" className="py-20 bg-gray-900">
+    <section id="tracks" className="py-20 border-b border-neutral-200 dark:border-neutral-600">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <motion.div
           initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ export default function Tracks() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold dark:text-white mb-4">
             🚀 Hackathon Tracks
           </h2>
         </motion.div>
@@ -55,7 +55,7 @@ export default function Tracks() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform"
+              className="bg-white/10 backdrop-blur-md border border-black/10 dark:border-white/20 rounded-lg p-6 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform"
             >
               {/* Image with overlay */}
               <div className="relative h-48 rounded-lg overflow-hidden mb-4">
@@ -68,12 +68,12 @@ export default function Tracks() {
               </div>
 
               {/* Track Title */}
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-2">
                 {track.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-300">{track.description}</p>
+              <p className="text-gray-500 dark:text-gray-400">{track.description}</p>
             </motion.div>
           ))}
         </div>
