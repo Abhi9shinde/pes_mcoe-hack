@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center px-6 py-3">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <span className="text-2xl font-bold gradient-text">PES MCOE Hack</span>
+          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-tr from-primary to-secondary">PES MCOE Hack</span>
         </div>
 
         {/* Desktop Menu */}
