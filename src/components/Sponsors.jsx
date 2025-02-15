@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const sponsorTiers = [
   {
@@ -27,43 +27,49 @@ const sponsorTiers = [
 
 export default function Sponsors() {
   return (
-    <section id="sponsors" className="py-20">
+    <section id="sponsors" className="py-20 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">Our Sponsors</h2>
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-600">
+            Our Sponsors
+          </h2>
         </motion.div>
 
         <div className="space-y-16">
           {sponsorTiers.map((tier, tierIndex) => (
             <motion.div
               key={tier.tier}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: tierIndex * 0.2 }}
+              transition={{ duration: 0.6, delay: tierIndex * 0.2 }}
               viewport={{ once: true }}
-              className="glass-card"
+              className="glass-card rounded-2xl p-8 shadow-lg border border-gray-500 backdrop-blur-md bg-white/10"
             >
-              <h3 className="text-2xl font-semibold mb-8 text-center">{tier.tier}</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-center text-yellow-300">
+                {tier.tier}
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
                 {tier.sponsors.map((sponsor, index) => (
                   <motion.div
                     key={sponsor.name}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    whileHover={{ scale: 1.1, rotate: 2 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="w-48 h-24 flex items-center justify-center"
+                    className="w-48 h-24 flex items-center justify-center rounded-xl shadow-md overflow-hidden transition-transform bg-black/20 hover:shadow-xl"
                   >
-                    <img
+                    <motion.img
                       src={sponsor.logo}
                       alt={sponsor.name}
                       className="max-w-full max-h-full object-contain"
+                      whileHover={{ scale: 1.15 }}
+                      transition={{ duration: 0.3 }}
                     />
                   </motion.div>
                 ))}

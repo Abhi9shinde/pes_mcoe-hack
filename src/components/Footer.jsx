@@ -9,15 +9,15 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold text-white mb-4">📍 Address</h3>
             <p className="text-gray-200 leading-relaxed">
-              THE PROGRESSIVE EDUCATION SOCIETY'S<br />
+              THE PROGRESSIVE EDUCATION SOCIETY&apos;S<br />
               MODERN COLLEGE OF ENGINEERING (PES MCOE)<br />
               1186/A, SHIVAJI NAGAR, OFF J.M. ROAD<br />
               PUNE, MAHARASHTRA 411005
             </p>
             <div className="mt-6">
               <p className="text-lg font-medium italic text-gray-300">
-                "IT'S NOT JUST ABOUT WRITING CODE,<br />
-                IT'S ABOUT THE EXPERIENCE"
+                &quot;IT&apos;S NOT JUST ABOUT WRITING CODE,<br />
+                IT&apos;S ABOUT THE EXPERIENCE&quot;
               </p>
             </div>
           </div>
