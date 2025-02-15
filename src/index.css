@@ -59,11 +59,11 @@
 }
 
 .glass {
-  @apply backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10;
+  @apply backdrop-blur-md bg-white/30 dark:bg-black/10 border border-black/10 dark:border-white/10;
 }
 
 .glass-card {
-  @apply backdrop-blur-md bg-white/5 dark:bg-black/5 border border-white/20 dark:border-white/10 rounded-xl transition-all hover:bg-white/10 dark:hover:bg-black/20;
+  @apply backdrop-blur-md bg-white/5 dark:bg-black/5 border border-black/20 dark:border-white/10 rounded-xl transition-all hover:bg-white/10 dark:hover:bg-black/20;
 }
 
 .gradient-text {
