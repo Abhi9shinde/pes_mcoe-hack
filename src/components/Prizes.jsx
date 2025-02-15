@@ -1,11 +1,12 @@
-import { motion } from 'framer-motion';
-import { FaTrophy, FaMedal, FaAward, FaCheckCircle } from 'react-icons/fa';
+import { useEffect, useRef, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { FaTrophy, FaMedal, FaAward, FaCheckCircle } from "react-icons/fa";
 
 const prizes = [
   {
     icon: <FaTrophy className="w-14 h-14 text-yellow-400" />,
     title: "First Prize",
-    amount: "₹20,000",
+    amount: 20000, 
     benefits: [
       "Cash Prize",
       "Internship Opportunities",
@@ -16,7 +17,7 @@ const prizes = [
   {
     icon: <FaMedal className="w-14 h-14 text-gray-400" />,
     title: "Second Prize",
-    amount: "₹15,000",
+    amount: 15000,
     benefits: [
       "Cash Prize",
       "Internship Opportunities",
@@ -27,7 +28,7 @@ const prizes = [
   {
     icon: <FaAward className="w-14 h-14 text-amber-600" />,
     title: "Third Prize",
-    amount: "₹10,000",
+    amount: 10000,
     benefits: [
       "Cash Prize",
       "Internship Opportunities",
@@ -36,6 +37,51 @@ const prizes = [
     ]
   }
 ];
+
+const CountUp = ({ amount }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(ref.current);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTimestamp;
+    const duration = 1500; 
+    
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      
+      setCount(Math.floor(easeOutQuart * amount));
+      
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    
+    window.requestAnimationFrame(step);
+  }, [isVisible, amount]);
+
+  return <span ref={ref}>{count.toLocaleString()}</span>;
+};
 
 export default function Prizes() {
   return (
@@ -66,8 +112,10 @@ export default function Prizes() {
             >
               <div className="flex justify-center mb-4">{prize.icon}</div>
               <h3 className="text-xl font-semibold text-black dark:text-white mb-2">{prize.title}</h3>
-              <p className="text-2xl font-bold text-yellow-400 mb-4">{prize.amount}</p>
-              
+              <p className="text-2xl font-bold text-yellow-400 mb-4">
+                ₹<CountUp amount={prize.amount} />
+              </p>
+
               <ul className="text-left space-y-2">
                 {prize.benefits.map((benefit, i) => (
                   <li key={i} className="flex items-center text-gray-500">
