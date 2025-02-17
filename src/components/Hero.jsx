@@ -103,7 +103,8 @@ export default function Hero() {
               Transform Your Ideas into Reality
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg text-lg font-medium transition-colors">
+              <button 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg text-lg font-medium transition-colors">
                 Register Now
               </button>
               <button className="glass hover:bg-white/40 dark:hover:bg-white/10 text-foreground px-8 py-4 rounded-lg text-lg font-medium transition-colors">

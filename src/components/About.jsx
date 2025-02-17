@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section id="about" >
       {/* Glowing Background Effect */}
-      <div className="absolute inset-0"></div>
+      {/* <div className="absolute inset-0"></div> */}
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Title */}

@@ -18,7 +18,7 @@ function App() {
           </div>
 
           {/* 3D Floating elements */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 overflow-hidden pointer-events-auto">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/30 rounded-full blur-3xl animate-blob" />
             <div className="absolute top-0 -left-40 w-80 h-80 bg-secondary/30 rounded-full blur-3xl animate-blob animation-delay-2000" />
             <div className="absolute -bottom-40 left-20 w-80 h-80 bg-primary/30 rounded-full blur-3xl animate-blob animation-delay-4000" />
