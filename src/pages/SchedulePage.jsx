@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Timeline from '../components/Timeline';
 
-export default function SchedulePage() {
+function SchedulePage() {
   return (
     <div className="py-20 px-4">
       <motion.div
@@ -14,7 +14,7 @@ export default function SchedulePage() {
           Event Schedule
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Mark your calendar! Here's the complete timeline of the hackathon, 
+          Mark your calendar! Here&apos;s the complete timeline of the hackathon, 
           from registration to the final presentation.
         </p>
       </motion.div>
@@ -22,3 +22,6 @@ export default function SchedulePage() {
     </div>
   );
 }
+
+
+export default SchedulePage;

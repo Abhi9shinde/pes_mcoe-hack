@@ -8,7 +8,7 @@ import Timeline from '../components/Timeline';
 import Sponsors from '../components/Sponsors';
 import FAQ from '../components/FAQ';
 
-export default function HomePage() {
+function HomePage() {
   return (
     <>
       <Hero />
@@ -23,3 +23,5 @@ export default function HomePage() {
     </>
   );
 }
+
+export default HomePage

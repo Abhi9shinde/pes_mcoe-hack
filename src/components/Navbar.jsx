@@ -10,6 +10,8 @@ const navItems = [
   { name: 'Timeline', to: 'timeline', type: 'scroll' },
   { name: 'Tracks', to: 'tracks', type: 'scroll' },
   { name: 'FAQ', to: 'faq', type: 'scroll' },
+  { name: 'Team', to: '/team', type: 'route' },
+  
 ];
 
 export default function Navbar() {
