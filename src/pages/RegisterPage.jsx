@@ -3,7 +3,7 @@ import { FaUserPlus, FaUsers, FaCode, FaLaptopCode } from 'react-icons/fa';
 
 export default function RegisterPage() {
   return (
-    <div className="min-h-[80vh] py-20 px-4">
+    <div className="min-h-[80vh] mt-20 py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

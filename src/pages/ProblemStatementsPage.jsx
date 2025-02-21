@@ -3,7 +3,7 @@ import { FaLock } from 'react-icons/fa';
 
 export default function ProblemStatementsPage() {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4">
+    <div className="min-h-[80vh] flex items-center justify-center px-4 mt-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

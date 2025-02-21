@@ -11,12 +11,13 @@ function CountdownTimer() {
   });
 
   useEffect(() => {
-    // Set your event date here
-    const eventDate = new Date('2024-03-16T10:00:00').getTime();
+    // Calculate the event date 50 days from now
+    const now = new Date();
+    const eventDate = new Date(now.getTime() + 50 * 24 * 60 * 60 * 1000).getTime();
 
     const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const difference = eventDate - now;
+      const currentTime = new Date().getTime();
+      const difference = eventDate - currentTime;
 
       setTimeLeft({
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
