@@ -23,7 +23,7 @@ export default function Benefits() {
   return (
     <section id="benefits" className="py-20 border-t border-b border-neutral-200 dark:border-neutral-600 mt-8">
       {/* Background Glow Effect */}
-      <div className="absolute inset-0"></div>
+      {/* <div className="absolute inset-0"></div> */}
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
